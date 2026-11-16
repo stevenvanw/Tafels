@@ -1,0 +1,12 @@
+---V1.0.1---
+Datum : 16/11/2026
+- Bugfix : Timer startte al bij verandering van ingestelde tijd.
+- Bugfix : Tijd was niet correct bij andere waardes als 10s.
+- Bugfix : Opvangen van niet numerieke ingave bij uitkomst of tijd
+
+---V1.0.0---
+Datum : 04/11/2026
+Eerste release
+
+
+

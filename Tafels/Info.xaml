@@ -1,0 +1,52 @@
+﻿<Window x:Class="Tafels.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Info" 
+        Height="300" Width="500" 
+        WindowStartupLocation="CenterOwner" 
+        WindowStyle="None">
+
+    <Grid Background="#F4F7F6">
+        <Border Background="White" 
+                CornerRadius="15" 
+                BorderBrush="#4A90E2" 
+                BorderThickness="2"
+                Margin="15">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="#CCCCCC" Direction="270" ShadowDepth="2"/>
+            </Border.Effect>
+
+            <Grid Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Zelfgemaakte titelbalk -->
+                <TextBlock Grid.Row="0" Text="Info" FontSize="18" FontFamily="Segoe UI Bold" Foreground="#4A90E2" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+
+                <TextBox FontSize="14" x:Name="tboxInfo" Text="Info" FontFamily="Segoe UI Semibold" Foreground="#333333" VerticalAlignment="Top" TextWrapping="Wrap" MaxWidth="500" Margin="0,25,0,0" Height="150" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" BorderThickness="0"/>
+                <TextBox FontSize="14" Text="Gemaakt door : Steven Vanwesemael" FontFamily="Segoe UI Semibold" Foreground="#333333" VerticalAlignment="Top" TextWrapping="Wrap" MaxWidth="500" Margin="0,178,0,0" Height="22" Grid.RowSpan="2" BorderThickness="0"/>
+
+
+                <!-- terug Knop -->
+                <Button Grid.Row="2" Content="Terug" Width="100" Height="35" Background="#4A90E2" Foreground="White" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" Click="TerugButton_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="btnBorder" Background="{TemplateBinding Background}" CornerRadius="8">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="btnBorder" Property="Background" Value="#357ABD"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
